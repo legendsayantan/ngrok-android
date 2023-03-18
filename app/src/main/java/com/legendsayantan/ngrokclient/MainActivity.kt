@@ -1,7 +1,10 @@
 package com.legendsayantan.ngrokclient
 
+import android.content.ClipData
+import android.content.ClipboardManager
 import android.content.Context
 import android.content.Intent
+import android.graphics.Bitmap
 import android.net.wifi.WifiManager
 import android.os.Bundle
 import android.transition.TransitionManager
@@ -46,6 +49,21 @@ class MainActivity : AppCompatActivity() {
                         }
                     }
                 }, 1000)
+            }
+
+            override fun shouldOverrideUrlLoading(
+                view: WebView?,
+                request: WebResourceRequest?
+            ): Boolean {
+                val url = request?.url.toString()
+                return if(url.contains("ngrok")){
+                    //copy to clipboard
+                    val clipboard = getSystemService(Context.CLIPBOARD_SERVICE) as ClipboardManager
+                    val clip = ClipData.newPlainText("ngrok url", url)
+                    clipboard.setPrimaryClip(clip)
+                    Toast.makeText(applicationContext, "Copied to clipboard", Toast.LENGTH_SHORT).show()
+                    true
+                }else false
             }
         }
         webView.webChromeClient = WebChromeClient()
