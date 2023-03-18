@@ -1,0 +1,19 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.Ngrokbinarytest" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/ngrokMedium</item>
+        <item name="colorPrimaryVariant">@color/ngrokDark</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/ngrokLight</item>
+        <item name="colorSecondaryVariant">@color/ngrokDark</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
+        <!-- Customize your theme here. -->
+        <item name="android:textColor">@color/ngrokLighter</item>
+        <item name="android:textColorHint">@color/ngrokLighter</item>
+        <item name="android:textColorTertiary">@color/ngrokLighter</item>
+    </style>
+</resources>

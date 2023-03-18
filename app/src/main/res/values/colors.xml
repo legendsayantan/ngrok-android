@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="ngrokLighter">#6389E1</color>
+    <color name="ngrokLight">#1853db</color>
+    <color name="ngrokMedium">#312C9F</color>
+    <color name="ngrokDark">#1F1E37</color>
+</resources>

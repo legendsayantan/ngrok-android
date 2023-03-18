@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/item2"
+        android:title="Status"
+        android:icon="@drawable/baseline_insert_link_24"
+        />
+    <item
+        android:id="@+id/item1"
+        android:title="Inspect"
+        android:icon="@drawable/baseline_search_24"
+        />
+    <item
+        android:id="@+id/item0"
+        android:title="Logs"
+        android:icon="@drawable/baseline_data_object_24"/>
+</menu>
