@@ -70,6 +70,18 @@ class MainActivity : AppCompatActivity() {
                 workWithBottomBar(it)
             }
         }
+        val protocol = intent.getStringExtra("protocol")
+        val port = intent.getIntExtra("port",-1)
+        if(authenticated(applicationContext)){
+            if(protocol!=null && port!=-1){
+                if(ngrokThread!=null && ngrokThread!!.running){
+                    ngrokThread!!.stopTunnel()
+                }
+                startTunnel(protocol,port)
+            }
+        }else if(protocol!=null && port!=-1) {
+            Toast.makeText(applicationContext,"Please login first to start tunnel",Toast.LENGTH_LONG).show()
+        }
     }
 
     override fun onResume() {
